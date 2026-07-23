@@ -1,0 +1,14 @@
+{
+  "name": "wa-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@whiskeysockets/baileys": "^7.0.0-rc13",
+    "firebase": "^11.0.2",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.5",
+    "enquirer": "^2.4.1",
+    "pino": "^9.0.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
