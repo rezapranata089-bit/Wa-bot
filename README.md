@@ -123,13 +123,15 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
 
 Variabel konfigurasi lainnya:
 
-| Variabel | Fungsi | Contoh |
-|---|---|---|
-| `MODE` | Pilih mode balasan: `ai` atau `static` | `ai` |
-| `COOLDOWN_SECONDS` | Jeda balasan ke nomor yang sama | `60` |
-| `DAILY_LIMIT` | Maksimal balasan per hari | `100` |
-| `WHITELIST_MODE` | Aktif/nonaktif mode whitelist | `true` / `false` |
-| `WHITELIST_NUMBERS` | Daftar nomor yang diizinkan (pisahkan dengan koma) | `62812xxxx,62813xxxx` |
+| Variabel | Fungsi | Penjelasan Detail | Contoh |
+|---|---|---|---|
+| `MODE` | Mode Balasan | Menentukan cara bot membalas. Gunakan `ai` untuk balasan cerdas berbasis teks, atau `static` untuk balasan pesan tetap yang sudah ditentukan. | `ai` |
+| `COOLDOWN_SECONDS` | Jeda Balasan | Durasi waktu tunggu (dalam detik) sebelum bot membalas pesan kembali ke nomor yang sama. Berguna untuk menghindari spam dan agar terlihat lebih natural. | `60` |
+| `DAILY_LIMIT` | Batas Harian | Jumlah maksimal pesan yang akan dibalas bot secara otomatis dalam satu hari (24 jam). Setelah limit tercapai, bot akan berhenti membalas hingga hari berikutnya. | `100` |
+| `WHITELIST_MODE` | Mode Izin Khusus | Jika diatur ke `true`, bot hanya akan merespons nomor-nomor yang terdaftar di `WHITELIST_NUMBERS`. Jika `false`, bot merespons semua pesan masuk. | `true` |
+| `WHITELIST_NUMBERS` | Daftar Nomor | Daftar nomor WhatsApp yang diizinkan untuk mendapatkan balasan otomatis (khusus jika `WHITELIST_MODE` aktif). Gunakan format kode negara tanpa tanda plus. | `62812xxxx,62813xxxx` |
+| `AUTO_PAUSE` | Jeda Otomatis | Menghentikan sementara balasan otomatis jika Anda sedang aktif membuka atau membalas chat secara manual dari perangkat utama Anda. | `true` |
+| `AI_MODEL` | Model AI | Memilih model bahasa spesifik yang ingin digunakan (misalnya: `llama3-8b-8192` untuk Groq atau `gpt-3.5-turbo` untuk OpenAI). | `llama3-8b-8192` |
 
 ---
 
