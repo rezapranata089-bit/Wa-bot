@@ -1,70 +1,53 @@
 # Zeux AI — WhatsApp Auto-Reply Bot
-
-Bot WhatsApp auto-reply berbasis AI (Groq / OpenAI) dengan sistem aktivasi premium.
-
----
-
-## Persyaratan
-
-- **Termux** (Android) atau Linux
-- **Node.js** v18+ → `pkg install nodejs`
-- **Git** → `pkg install git`
-- **API Key** Groq (gratis) atau OpenAI
-
----
-
-## Cara Install
-
+Asisten virtual WhatsApp cerdas berbasis AI (**Groq** / **OpenAI**) yang dirancang untuk otomatisasi balasan pesan dengan interaksi yang natural, profesional, dan dilengkapi sistem kontrol penuh.
+## 📋 Persyaratan Sistem
+Sebelum memulai, pastikan perangkat Anda telah memenuhi beberapa kebutuhan berikut:
+ * **Termux** (untuk pengguna Android) atau **Linux / VPS**
+ * **Node.js** versi 18 atau lebih baru (pkg install nodejs)
+ * **Git** (pkg install git)
+ * **API Key** (disarankan menggunakan Groq karena gratis, cepat, dan handal)
+## 🚀 Panduan Instalasi
+Ikuti langkah-langkah di bawah ini melalui terminal perangkat Anda:
 ```bash
-# 1. Clone repo
+# 1. Clone repositori bot
 git clone https://github.com/USERNAME/REPO-NAME.git
 cd REPO-NAME
 
-# 2. Buat file .env
+# 2. Buat file konfigurasi .env
 cp .env.example .env
-nano .env   # isi API key kamu di sini
 
-# 3. Jalankan
-bash start.sh
+# 3. Buka file .env untuk mengisi API Key Anda
+nano .env
+
 ```
-
----
-
-## Isi file .env
-
+Di dalam file .env, masukkan API Key Anda sesuai dengan provider yang digunakan:
 ```env
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxx
-# atau kalau pakai OpenAI:
+# Atau jika Anda menggunakan OpenAI:
 # OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxx
+
 ```
-
----
-
-## Aktivasi Premium
-
-1. Jalankan bot → bot akan tampilkan **Device ID** kamu
-2. Kirim ID tersebut ke admin via WhatsApp untuk aktivasi
-3. Setelah diaktifkan, bot langsung berjalan otomatis
-
----
-
-## Cara Jalankan
-
-```bash
-bash start.sh
-```
-
-Dari menu pilih **[ 1 ] Jalankan Bot**, scan QR WhatsApp, selesai.
-
----
-
-## Fitur
-
-- **Mode AI** — balas pesan otomatis pakai Groq / OpenAI
-- **Mode Static** — pesan tetap tanpa AI
-- **Multi API Key** — fallback otomatis kalau satu key rate-limited
-- **Cooldown** — jeda antar balasan per pengirim
-- **Whitelist** — batasi hanya nomor tertentu
-- **Limit harian** — batas balasan per hari
-- **Auto-pause** — bot berhenti balas saat owner membaca chat
-- **Remote control** — admin bisa restart / update / ganti config dari panel
+## ⚙️ Cara Menjalankan Bot
+ 1. Jalankan script utama dengan perintah:
+   ```bash
+   bash start.sh
+   
+   ```
+ 2. Pada menu interaktif yang muncul di terminal, pilih opsi **[ 1 ] Jalankan Bot**.
+ 3. Scan **QR Code** yang muncul menggunakan perangkat WhatsApp Anda (ketuk menu Perangkat Tertaut > Tautkan Perangkat).
+ 4. Selesai! Bot kini aktif dan siap berjalan.
+## 🔑 Aktivasi Perangkat
+> **Catatan:** Jika sistem Anda menggunakan pembatasan akses perangkat, ikuti langkah ini:
+> 
+ 1. Saat pertama kali dijalankan, bot akan menghasilkan dan menampilkan **Device ID** unik di layar terminal Anda.
+ 2. Salin dan kirimkan Device ID tersebut kepada admin untuk didaftarkan ke dalam sistem.
+ 3. Setelah diaktifkan oleh admin, bot Anda akan langsung terhubung secara otomatis.
+## ✨ Fitur Unggulan
+ * **🤖 Mode AI Cerdas** — Membalas pesan secara kontekstual dan dinamis menggunakan model Llama (Groq) atau GPT (OpenAI).
+ * **⚡ Mode Static** — Mengirimkan pesan balasan standar (statis) tanpa memanggil API AI.
+ * **🔄 Multi API Key Support** — Fitur cadangan (*fallback*) otomatis ke key lain apabila API key utama mengalami *rate-limit*.
+ * **⏱️ Cooldown System** — Mengatur jeda waktu pengiriman pesan balasan ke pengirim yang sama untuk mencegah spam.
+ * **🛡️ Whitelist Mode** — Membatasi balasan otomatis hanya kepada nomor-nomor tertentu yang diizinkan.
+ * **📊 Limit Harian** — Mengatur batasan maksimal jumlah pesan balasan dalam sehari.
+ * **⏸️ Auto-Pause** — Bot secara otomatis menunda balasan apabila Anda sedang membaca pesan masuk secara langsung di WhatsApp.
+ * **🎛️ Panel Kontrol Jarak Jauh** — Memudahkan pengelolaan sistem, melakukan *restart*, memperbarui versi, hingga mengubah konfigurasi bot dari jarak jauh.
