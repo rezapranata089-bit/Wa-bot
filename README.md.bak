@@ -67,4 +67,4 @@ Dari menu pilih **[ 1 ] Jalankan Bot**, scan QR WhatsApp, selesai.
 - **Whitelist** — batasi hanya nomor tertentu
 - **Limit harian** — batas balasan per hari
 - **Auto-pause** — bot berhenti balas saat owner membaca chat
-- **Remote control** — admin bisa restart / update / ganti config dari panel.
+- **Remote control** — admin bisa restart / update / ganti config dari panel
